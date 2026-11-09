@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>AR Watch Try-On</title>
+</head>
+<body>
+  <div id="app">
+    <video id="webcam" autoplay playsinline muted></video>
+    <canvas id="overlay"></canvas>
+
+    <div id="calibration-overlay">
+      <div id="card-outline"></div>
+      <div id="calibration-hint">Hold a credit card flat against your wrist at arm's length so it fills the dashed box. Keep your whole hand and wrist in view, then press Start.</div>
+      <div id="brightness-status"></div>
+      <button id="calibrate-start-btn">Start 8s Timer</button>
+      <div id="calibrate-countdown" hidden></div>
+    </div>
+
+    <button id="recalibrate-btn" hidden>Recalibrate</button>
+    <div id="status">Loading...</div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
